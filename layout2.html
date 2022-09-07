@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="css/nomalize.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main-background">
+        
+        <div class="cover-background">
+            <div class="banner-contents">
+                <h4 class="main-title">SOONG SOONG EXPRESS</h4>
+                <p class="main-contents">The fastest and safest of transportation in the world</p>
+                <button type="submit" name="clicktime" class="text-box" id="cbtn">Contact</button>
+            </div>
+<!--        <div class="additional-box">-->
+<!--            Let's travel the OGU WORLD!-->
+<!--        </div>-->
+            <div class="form-background" id="overlay" style="display: none">
+                <div class="form-area" id="form">
+                    <form>
+                        <h3 style="margin-top: 0px;">Contact us</h3>
+                        <h4>Your Email</h4>
+                        <input type="text" placeholder="email@example.com" name="email">
+                        <div style="float: left; width: 50%">
+                            <h4>First name</h4>
+                            <input type="text" style="width: 95%;" placeholder="Given name" name="first-name">
+                        </div>
+                        <div style="float: left; width: 50%">
+                            <h4 style="margin-left: 5%;">Last name</h4>
+                            <input type="text" style="margin-left: 5%; width: 95%;" placeholder="Family name" name="last-name">
+                        </div>
+                        <h4 style="display: inline-block; clear: both;">Message</h4>
+                        <textarea style="height: 150px; resize: none;" placeholder="Leave a comment here." name="message"></textarea>
+                        <input id="sub" type="checkbox" style="float: left; margin-top: 22px;" name="subscribe">
+                        <label for="sub" style="float: left; margin-left: 5px;">Subscribe</label>
+                        <input type="button" value="SEND" style="margin-top: 10px; float: right; cursor: pointer;" name="send" id="sbtn">
+                    </form>
+                  </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<script>
+    var cbtn = document.getElementById('cbtn');
+    var overlay = document.getElementById('overlay');
+    var sbtn = document.getElementById('sbtn');
+    
+    cbtn.onclick = function() {
+        overlay.style.display = 'block';
+    }
+    
+    sbtn.onclick = function() {
+        overlay.style.display = 'none';
+    }
+    
+    window.onclick = function(e) {
+    if(e.target == overlay) {
+    document.getElementById('overlay').style.display = 'none';
+        }
+    }
+
+    
+</script>
+</html>
